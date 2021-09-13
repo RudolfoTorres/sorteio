@@ -66,6 +66,7 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+    // renderiza bolinhas
     for (let i=1; i<=25; i++) {
         $(".cartela").append(`<div class="wrapper-ball">
                                 <div style="position: absolute;">
@@ -75,16 +76,20 @@
                              </div>`);
     }
 
+    //gera numeros aleatorios
     function geraAleatorio() {
         return Math.floor(Math.random() * 25 + 1);
     }
 
+    //cria array sem repetir numeros
     for (var numSorteados = []; numSorteados.length < 10;) {
         let bola = geraAleatorio();
         if (numSorteados.indexOf(bola) == -1 ) {
             numSorteados.push(bola);
         }
     }
+
+    console.log(numSorteados);
 
 </script>
 </html> 
