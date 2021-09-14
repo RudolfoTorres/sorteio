@@ -34,6 +34,7 @@
 
         .light {
             box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+            text-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
         }
 
         .inner-ball {
@@ -89,7 +90,15 @@
         }
     }
 
-    console.log(numSorteados);
+    function acendeBola(element) {
+        $(".inner-ball").each(function(){
+            if( element == $(this).text()){
+                $(this).addClass("light");
+                console.log($(this).text());
+            }
+        });
+    }
 
+    numSorteados.forEach(acendeBola)
 </script>
 </html> 
